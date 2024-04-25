@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 1</title>
+    <style>
+
+        #Antall {
+            width: 45px;
+        }
+        .error {
+            margin-left: 100px;
+            color: red;
+            visibility:hidden;
+        }
+        #info {
+            display: block;
+            float: left;
+            width: 100px;
+        }
+        table, th, td {
+            border: 1px solid bisque;
+            border-collapse: collapse;
+            padding: 0 10px 0 5px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Bestilling av kinobiletter</h1>
+<label id="info" for="Film">Velg Film</label>
+
+<select id="Film">
+    <option>Dune: Part Two</option>
+    <option>Bob Marley: One Love</option>
+    <option>Wonka</option>
+    <option>Kung Fu Panda 4</option>
+    <option>Night Swim</option>
+</select>
+<br>
+
+<br>
+<label id="info" for="Antall">Antall</label>
+<input type="number" name="antall" id="Antall" min="1">
+<label class="error" id="ErrorAntall" for="Antall">Må skrive inn et tall</label>
+<br>
+
+<br>
+<label id="info" for="Fornavn">Fornavn</label>
+<input type="text" name="fornavn" id="Fornavn">
+<label class="error" id="ErrorFornavn" for="Fornavn">Må skrive inn et Fornavn</label>
+<br>
+
+<label id="info" for="Etternavn">Etternavn</label>
+<input type="text" name="etternavn" id="Etternavn">
+<label class="error" id="ErrorEtternavn" for="Etternavn">Må skrive inn et Etternavn</label>
+<br>
+
+<label id="info" for="Telefonnr">Telefonnr</label>
+<input type="number" name="telefonnr" id="Telefonnr" min="8">
+<label class="error" id="ErrorTelefonnr" for="Telefonnr">Må skrive inn et gyldig telefonnr</label>
+<br>
+
+<label id="info" for="Epost">Epost</label>
+<input type="text" name="epost" id="Epost">
+<label class="error" id="ErrorEpost" for="Epost">Må skrive inn en gyldig Epost</label>
+<br>
+
+<br>
+<button onclick="tickets()">Kjøp Billett</button>
+<br>
+
+
+<h2>Alle Billetter</h2>
+<div id="Transaksjon"></div>
+
+<br>
+<button onclick="clearBilettRegister()">Slett alle billettene</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="oblig1Script.js"></script>
+</html>
